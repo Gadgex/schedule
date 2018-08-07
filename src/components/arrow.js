@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Arrow extends Component {
 
     constructor(props) {
-        super()
+        super(props)
 
         this.state = {
             status: false
@@ -18,13 +18,13 @@ class Arrow extends Component {
             document.getElementById(this.id).classList.add('arrow-closed');
         }
 
-        this.setState({ status: !this.state.status})
-    }.bind(this)
+        this.setState({ status: !this.state.status })
+    }.bind(this);
 
-    render () {
+    render() {
         this.id = `arrow-${this.props.id}`
         return (
-            <a id={this.id} onClick={() => this.toggleArrow()}className={`${this.props.className} arrow`}></a>
+            <a id={this.id} onClick={() => this.toggleArrow()} className={`${this.props.className} arrow`}></a>
         )
     }
 }
