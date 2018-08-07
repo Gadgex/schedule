@@ -17,24 +17,17 @@ class Action extends Component {
             document.getElementById(this.id).classList.remove('action-remove');
         }
         this.status = !this.status;
-    }.bind(this)
+    }.bind(this);
 
-    render () {
+    render() {
         this.id = `action ${this.props.id}`
         return (
-            <a 
+            <a
                 id={this.id}
-                onClick={() => this.handleAction()} 
+                onClick={() => this.handleAction()}
                 className={`${this.props.className} action`}>
-                
             </a>
         )
-        // return (
-        //     <button onClick={() => this.props.onClick()} className={`${this.props.className} action`}>
-        //         {Icon('fas fa-plus-circle') }
-        //         {/* fas fa-times-circle */}
-        //     </button>
-        // )
     }
 }
 
